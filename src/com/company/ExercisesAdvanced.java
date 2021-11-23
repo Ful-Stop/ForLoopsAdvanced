@@ -42,11 +42,48 @@ public class ExercisesAdvanced {
             }
         }
 
+    public static void isosceles(int h){
+        for (int i = 1; i <= h; i ++){
+            for (int l = h - i; l >= 1; l --){
+                System.out.print(" ");
+            }
+            for (int j = 1; j < i; j ++){
+                System.out.print(j);}
+
+            System.out.print(i);
+            for (int k = i - 1; k >= 1; k --){
+                System.out.print(k);}
+            System.out.println("");
+            }
+        }
+
+    public static void upSideDown(int start, int end){
+        for (int i = start; i >= end; i --){
+            for (int l = start - i; l >= 1; l --){
+                System.out.print(" ");
+            }
+            for (int j = i; j > end; j --){
+                System.out.print(j);
+            }
+            System.out.print(end);
+            for (int k = end + 1; k < i + 1; k ++){
+                System.out.print(k);
+            }
+            System.out.println("");
+        }
+    }
+
+
 
     public static void main(String[] args) {
         eights();
 
         alternate(5);
+
+        isosceles(5);
+
+        upSideDown(9, 5);
+        upSideDown(8, 6);
     }
 }
 
